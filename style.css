@@ -4,6 +4,7 @@ body {
     font-weight: 400;
     max-width: 1440px;
     margin: auto;
+    color: white;
 }
 
 header {
@@ -41,4 +42,60 @@ nav a:hover {
     padding: 12px 40px 12px 40px;
     color: white;
     font-size: 20px;
+}
+
+.banner-profile {
+    display: flex;
+}
+
+.greeting {
+    color: #707070;
+    font-size: 24px;
+}
+
+.name {
+    color: #959595;
+    font-size: 28px;
+}
+
+.position {
+    color: #FD6F00;
+    font-size: 70px;
+}
+
+.icon-profile {
+    display: flex;
+    gap: 20px;
+}
+
+.icon-profile a {
+    border: 1px solid #bababa;
+    border-radius: 100%;
+    padding: 8px;
+}
+
+.icon-profile img {
+    width: 24px;
+    height: 24px;
+}
+
+.button-hire {
+    display: flex;
+    gap: 20px;
+}
+
+.button-secondary {
+    border: 2px solid #959595;
+    border-radius: 8px;
+    padding: 12px 40px 12px 40px;
+    color: #959595;
+    font-size: 20px;
+}
+
+.info-cv {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.04);
 }
