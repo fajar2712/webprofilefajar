@@ -1,0 +1,44 @@
+body {
+    background: #1e1e1e;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    max-width: 1440px;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #FD6F00;
+    font-family: "K2D", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #959595;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+nav a:hover {
+    color: #FD6F00;
+}
+
+.button {
+    background: #FD6F00;
+    border-radius: 8px;
+    padding: 12px 40px 12px 40px;
+    color: white;
+    font-size: 20px;
+}
