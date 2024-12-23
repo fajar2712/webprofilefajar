@@ -1,5 +1,5 @@
 body {
-    background: #1e1e1e;
+    background: #121212;
     font-family: "Lato", sans-serif;
     font-weight: 400;
     max-width: 1440px;
@@ -11,7 +11,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 10px;
+    margin: 57px 80px 0px 80px;
 }
 
 .logo {
@@ -47,8 +47,12 @@ nav a:hover {
 
 .banner-profile {
     display: flex;
-    margin: 106px 0px;
+    margin: 30px 80px 0px 80px;
     justify-content: space-between;
+}
+
+.profile-detail {
+    margin: 106.5px 128px 106.5px 0px;
 }
 
 .greeting {
@@ -138,13 +142,13 @@ nav a:hover {
 .services {
     text-align: center;
     font-size: 40px;
+    margin: 150px 0px 0px 0px;
 }
 
 .services-detail {
     color: #575757;
     font-size: 20px;
-    margin-top: 18px;
-    margin-bottom: 80px;
+    margin: 18px 0px 80px 0px;
 }
 
 .services-list {
@@ -171,4 +175,127 @@ nav a:hover {
 .services-icon-title {
     color: #FD6F00;
     font-size: 24px;
+}
+
+.about {
+    text-align: center;
+    font-size: 40px;
+    margin: 150px 71px 0px 71px;
+}
+
+.position {
+    color: #575757;
+    font-size: 20px;
+    margin-top: 18px;
+    margin-bottom: 80px;
+}
+
+.about-info {
+    display: flex;
+    margin: 0px 71px 0px 71px;
+}
+
+.about-info-detail {
+    margin: 113px 0px 113px 101px;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 190%;
+    color: #959595;
+}
+
+.download-cv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FD6F00;
+    width: 224px;
+    height: 48px;
+    font-size: 20px;
+    color: #ffff;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+.download-cv img {
+    padding-right: 10px;
+}
+
+.skill {
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 71px 0px 71px;
+}
+
+.skill-list {
+    text-align: center;
+    width: 200px;
+    height: 227px;
+}
+
+.skill-percent {
+    font-size: 30px;
+    color: #FD6F00;
+    padding-top: 24px;
+}
+
+.skill-name {
+    font-size: 24px;
+    color: #959595;
+    padding-top: 6px;
+}
+
+.portofolio {
+    text-align: center;
+    font-size: 40px;
+    margin: 150px 249.5px 70px 249.5px;
+}
+
+.portofolio-button {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0px 0px 0px;
+}
+
+.button-all {
+    background-color: #FD6F00;
+    color: #ffff;
+    font-size: 16px;
+    padding: 14px 40px 14px 40px;
+    border-radius: 8px;
+}
+
+.button-category {
+    background: rgb(198, 198, 198, 0.08);
+    color: #c6c6c6;
+    font-size: 16px;
+    padding: 14px 40px 14px 40px;
+    border-radius: 8px;
+}
+
+.portofolio-list {
+    margin: 0px 80px 0px 80px;
+}
+
+.portofolio-detail {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px 0px 0px;
+}
+
+.portofolio-info {
+    background: rgb(198, 198, 198, 0.08);
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 16px 16px 16px;
+    border-radius: 0px 0px 16px 16px;
+}
+
+.portofolio-name {
+    font-size: 16px;
+    color: #c6c6c6;
+}
+
+.portofolio-category {
+    font-size: 16px;
+    color: #959595;
 }
