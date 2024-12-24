@@ -163,7 +163,8 @@
     <div class="skill">
         <div class="skill-list">
             <div class="skill-icon">
-                <img src="images/skill 1.png" width="130" alt="">
+                <div class="skill-circle-1" data-value="1"></div>
+                <img src="images/skill icon 1.png" width="60" alt=""> 
             </div>
             <div class="skill-percent">
                 100%
@@ -174,10 +175,11 @@
         </div>
         <div class="skill-list">
             <div class="skill-icon">
-                <img src="images/skill 2.png" width="130" alt="">
+                <div class="skill-circle-2" data-value="0.8"></div>
+                <img src="images/skill icon 1.png" width="60" alt=""> 
             </div>
             <div class="skill-percent">
-                100%
+                80%
             </div>
             <div class="skill-name">
                 Adobe XD
@@ -185,7 +187,8 @@
         </div>
         <div class="skill-list">
             <div class="skill-icon">
-                <img src="images/skill 3.png" width="130" alt="">
+                <div class="skill-circle-3" data-value="0.85"></div>
+                <img src="images/skill icon 1.png" width="60" alt=""> 
             </div>
             <div class="skill-percent">
                 85%
@@ -196,7 +199,8 @@
         </div>
         <div class="skill-list">
             <div class="skill-icon">
-                <img src="images/skill 4.png" width="130" alt="">
+                <div class="skill-circle-4" data-value="0.6"></div>
+                <img src="images/skill icon 1.png" width="60" alt=""> 
             </div>
             <div class="skill-percent">
                 60%
@@ -207,7 +211,8 @@
         </div>
         <div class="skill-list">
             <div class="skill-icon">
-                <img src="images/skill 5.png" width="130" alt="">
+                <div class="skill-circle-5" data-value="0.7"></div>
+                <img src="images/skill icon 1.png" width="60" alt=""> 
             </div>
             <div class="skill-percent">
                 70%
@@ -438,9 +443,84 @@
             <div></div>
         </div>
     </div>
+<script src="plugin/jquery-3.7.1.min.js"></script>
 <script src="plugin/wow.min.js"></script>
+<script src="plugin/circle-progress.min.js"></script>
+<script src="plugin/jquery.waypoints.min.js"></script>
 <script>
-new WOW().init();
+    new WOW().init();
+
+    var options = {
+      reverse: true,
+      startAngle: -1.55,
+      lineCap: 'round',
+      size: 130,
+      thickness: 12,
+      fill: {
+        gradient: ["red", "orange"]
+      }
+    };
+    var circle1 = $('.skill-circle-1').circleProgress(options);
+    var circle2 = $('.skill-circle-2').circleProgress(options);
+    var circle3 = $('.skill-circle-3').circleProgress(options);
+    var circle4 = $('.skill-circle-4').circleProgress(options);
+    var circle5 = $('.skill-circle-5').circleProgress(options);
+
+    new Waypoint({
+        element: circle1.get(0),
+        handler: function() {
+            circle1.circleProgress({
+                value: circle1.data('value')
+            });
+            this.destroy();
+        },
+        offset: '100%'
+    });
+
+    new Waypoint({
+        element: circle2.get(0),
+        handler: function() {
+            circle2.circleProgress({
+                value: circle2.data('value')
+            });
+            this.destroy();
+        },
+        offset: '100%'
+    });
+
+    new Waypoint({
+        element: circle3.get(0),
+        handler: function() {
+            circle3.circleProgress({
+                value: circle3.data('value')
+            });
+            this.destroy();
+        },
+        offset: '100%'
+    });
+
+    new Waypoint({
+        element: circle4.get(0),
+        handler: function() {
+            circle4.circleProgress({
+                value: circle4.data('value')
+            });
+            this.destroy();
+        },
+        offset: '100%'
+    });
+
+    new Waypoint({
+        element: circle5.get(0),
+        handler: function() {
+            circle5.circleProgress({
+                value: circle5.data('value')
+            });
+            this.destroy();
+        },
+        offset: '100%'
+    });
+
 </script>
 </body>
 </html>
