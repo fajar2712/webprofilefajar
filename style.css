@@ -7,6 +7,22 @@ body {
     color: white;
 }
 
+* {
+    font-family: "Lato", sans-serif;
+}
+
+select {
+    color: #959595;
+}
+
+::placeholder {
+    color: #959595;
+    opacity: 1; /* Firefox */
+}
+::-ms-input-placeholder { /* Edge 12 -18 */
+    color: #959595;
+}
+
 header {
     display: flex;
     justify-content: space-between;
