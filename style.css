@@ -287,9 +287,10 @@ nav a:hover {
 }
 
 .portofolio-detail {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0px 0px 0px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
 .portofolio-info {
