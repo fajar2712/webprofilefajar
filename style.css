@@ -7,6 +7,22 @@ body {
     color: white;
 }
 
+* {
+    font-family: "Lato", sans-serif;
+}
+
+select {
+    color: #959595;
+}
+
+::placeholder {
+    color: #959595;
+    opacity: 1; /* Firefox */
+}
+::-ms-input-placeholder { /* Edge 12 -18 */
+    color: #959595;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -255,6 +271,16 @@ nav a:hover {
     padding-top: 6px;
 }
 
+.skill-icon {
+    position: relative;
+}
+.skill-icon img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .portofolio {
     text-align: center;
     font-size: 40px;
@@ -288,9 +314,10 @@ nav a:hover {
 }
 
 .portofolio-detail {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0px 0px 0px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
 .portofolio-info {
