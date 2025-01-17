@@ -232,6 +232,17 @@ nav a:hover {
     height: 227px;
 }
 
+.skill-icon {
+    position: relative;
+}
+
+.skill-icon img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .skill-percent {
     font-size: 30px;
     color: #FD6F00;

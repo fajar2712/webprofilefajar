@@ -26,14 +26,14 @@
     <div class="banner-profile">
         <div>
             <div class="profile-detail">
-                <div class="greeting">Hi i am</div>
-                <div class="name">Fajar Neisnaini</div>
-                <div class="position">Front-end Developer</div>
+                <div class="wow fadeIn greeting">Hi i am</div>
+                <div class="wow fadeIn name">Fajar Neisnaini</div>
+                <div class="wow fadeIn position">Front-end Developer</div>
                 <div class="icon-profile">
-                    <a class="wow bounceInUp" href="#"><img src="images/mdi_instagram.png" alt=""></a>
-                    <a href="#"><img src="images/mingcute_linkedin-line.png" alt=""></a>
-                    <a href="#"><img src="images/icon-park-outline_dribble.png" alt=""></a>
-                    <a href="#"><img src="images/ri_behance-line.png" alt=""></a>
+                    <a href="#" class="wow fadeInUp" data-wow-duration="0.4s"><img src="images/mdi_instagram.png" alt=""></a>
+                    <a href="#" class="wow fadeInUp" data-wow-duration="0.6s"><img src="images/mingcute_linkedin-line.png" alt=""></a>
+                    <a href="#" class="wow fadeInUp" data-wow-duration="0.8s"><img src="images/icon-park-outline_dribble.png" alt=""></a>
+                    <a href="#" class="wow fadeInUp" data-wow-duration="1s"><img src="images/ri_behance-line.png" alt=""></a>
                 </div>
                 <div class="button-hire">
                     <div class="button">Hire Me</div>
@@ -76,7 +76,7 @@
                     <div>
                         <img src="images/services_icon_1.png" width="70" alt="">
                     </div>
-                    <div class="services-icon-title">App Design</div>
+                    <div class="wow flipInX services-icon-title">App Design</div>
                 </div>
                 <div class="services-list-item-info">
                     <div>Lorem ipsum dolor sit amet . Imperdiet Lorem ipsum dolor sit amet consectetur</div>
@@ -87,7 +87,7 @@
                     <div>
                         <img src="images/services_icon_1.png" width="70" alt="">
                     </div>
-                    <div class="services-icon-title">App Design</div>
+                    <div class="wow flipInX services-icon-title">App Design</div>
                 </div>
                 <div class="services-list-item-info">
                     <div>Lorem ipsum dolor sit amet . Imperdiet Lorem ipsum dolor sit amet consectetur</div>
@@ -98,7 +98,7 @@
                     <div>
                         <img src="images/services_icon_1.png" width="70" alt="">
                     </div>
-                    <div class="services-icon-title">App Design</div>
+                    <div class="wow flipInX services-icon-title">App Design</div>
                 </div>
                 <div class="services-list-item-info">
                     <div>Lorem ipsum dolor sit amet . Imperdiet Lorem ipsum dolor sit amet consectetur</div>
@@ -163,10 +163,11 @@
     <div class="skill">
         <div class="skill-list">
             <div class="skill-icon">
-                <img src="images/skill 1.png" width="130" alt="">
+                <div class="skill-circle" data-value="1"></div>
+                <img src="images/basil_figma-outline.png" width="60" alt="">
             </div>
             <div class="skill-percent">
-                100%
+                100
             </div>
             <div class="skill-name">
                 Figma
@@ -174,10 +175,11 @@
         </div>
         <div class="skill-list">
             <div class="skill-icon">
-                <img src="images/skill 2.png" width="130" alt="">
+                <div class="skill-circle" data-value="0.8"></div>
+                <img src="images/iconoir_adobe-xd.png" width="60" alt="">
             </div>
             <div class="skill-percent">
-                100%
+                80
             </div>
             <div class="skill-name">
                 Adobe XD
@@ -185,10 +187,11 @@
         </div>
         <div class="skill-list">
             <div class="skill-icon">
-                <img src="images/skill 3.png" width="130" alt="">
+                <div class="skill-circle" data-value="0.9"></div>
+                <img src="images/iconoir_adobe-photoshop.png" width="60" alt="">
             </div>
             <div class="skill-percent">
-                85%
+                90
             </div>
             <div class="skill-name">
                 Adobe Photoshop
@@ -196,10 +199,11 @@
         </div>
         <div class="skill-list">
             <div class="skill-icon">
-                <img src="images/skill 4.png" width="130" alt="">
+                <div class="skill-circle" data-value="0.6"></div>
+                <img src="images/iconoir_adobe-illustrator.png" width="60" alt="">
             </div>
             <div class="skill-percent">
-                60%
+                60
             </div>
             <div class="skill-name">
                 Adobe Illustrator
@@ -207,10 +211,11 @@
         </div>
         <div class="skill-list">
             <div class="skill-icon">
-                <img src="images/skill 5.png" width="130" alt="">
+                <div class="skill-circle" data-value="0.7"></div>
+                <img src="images/basil_adobe-premiere-outline.png" width="60" alt="">
             </div>
             <div class="skill-percent">
-                70%
+                70
             </div>
             <div class="skill-name">
                 Adobe Premiere
@@ -438,9 +443,45 @@
             <div></div>
         </div>
     </div>
+<script src="plugin/jquery-3.7.1.min.js"></script>
 <script src="plugin/wow.min.js"></script>
+<script src="plugin/circle-progress.min.js"></script>
+<script src="plugin/jquery.waypoints.min.js"></script>
 <script>
-new WOW().init();
+    new WOW().init();
+    
+    new Waypoint({
+        element: $('.skill-circle').get(0),
+        handler: function() {
+            $('.skill-circle').circleProgress({
+                reverse: true,
+                startAngle: -1.60,
+                lineCap: 'round',
+                size: 130,
+                thickness: 12,
+                fill: {
+                    color: "#E46400"
+                }
+            });
+
+            $('.skill-percent').each(function () {
+                var $this = $(this);
+                $({ percent: 0 }).animate({
+                    percent:$this.text()
+                }, {
+                    duration: 1000,
+                    easing: 'swing',
+                    step: function () {
+                        $this.text(Math.ceil(this.percent) + '%');
+                    }
+                });
+            });
+
+            this.destroy();
+        },
+        offset: '100%'
+    });
+    
 </script>
 </body>
 </html>
